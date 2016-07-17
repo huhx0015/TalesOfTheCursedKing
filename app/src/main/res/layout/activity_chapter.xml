@@ -22,20 +22,15 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/activity_chapter_background"
-      android:src="@drawable/dq8_wallpaper"
+      android:src="@drawable/totck_background"
       android:scaleType="centerCrop" />
 
   <android.support.v7.widget.RecyclerView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/activity_chapter_recycler_view"
-      android:layout_gravity="center">
-
-  </android.support.v7.widget.RecyclerView>
-
-  <ExpandableListView android:id="@+id/sample_list"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:visibility="gone" />
+      android:layout_gravity="bottom|center"
+      android:background="@drawable/totck_dark_transparent_tile"
+      android:padding="16dp" />
 
 </FrameLayout>

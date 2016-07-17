@@ -4,15 +4,20 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/adapter_chapter_layout">
+    android:id="@+id/adapter_chapter_layout"
+    android:padding="16dp">
 
     <ImageView
-        android:layout_width="160dp"
-        android:layout_height="90dp"
+        android:layout_width="270dp"
+        android:layout_height="135dp"
         android:id="@+id/adapter_chapter_image" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/adapter_chapter_text" />
+        android:id="@+id/adapter_chapter_text"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:typeface="sans"
+        android:textColor="@android:color/white" />
 </LinearLayout>

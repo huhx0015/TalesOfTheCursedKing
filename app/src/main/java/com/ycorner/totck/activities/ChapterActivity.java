@@ -73,7 +73,7 @@ public class ChapterActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         chapterRecyclerView.setLayoutManager(layoutManager);
         ChapterAdapter chapterAdapter = new ChapterAdapter(chapterGroup, this);
         chapterRecyclerView.setAdapter(chapterAdapter);

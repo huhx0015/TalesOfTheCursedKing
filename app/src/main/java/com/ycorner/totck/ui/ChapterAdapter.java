@@ -50,7 +50,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
     @Override
     public void onBindViewHolder(ChapterViewHolder holder, int position) {
         holder.chapterTextView.setText(chapterGroup.get(0).movies.get(position).name);
-        holder.chapterTextView.setShadowLayer(4, 2, 2, Color.WHITE);
+        holder.chapterTextView.setShadowLayer(4, 2, 2, Color.BLACK);
 
         Glide.with(context)
                 .load(chapterGroup.get(0).movies.get(position).image)
