@@ -1,4 +1,4 @@
-package com.ycorner.totck;
+package com.ycorner.totck.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,8 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.ycorner.totck.R;
 import com.ycorner.totck.activities.PlayerActivity;
 import com.ycorner.totck.model.MovieGroup;
 import com.ycorner.totck.model.Movies;
@@ -48,6 +51,10 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
     public void onBindViewHolder(ChapterViewHolder holder, int position) {
         holder.chapterTextView.setText(chapterGroup.get(0).movies.get(position).name);
         holder.chapterTextView.setShadowLayer(4, 2, 2, Color.WHITE);
+
+        Glide.with(context)
+                .load(chapterGroup.get(0).movies.get(position).image)
+                .into(holder.chapterImageView);
     }
 
     @Override
@@ -74,6 +81,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
 
     public static class ChapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        private LinearLayout chapterLayout;
         private ImageView chapterImageView;
         private TextView chapterTextView;
 
@@ -82,12 +90,13 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
         ChapterViewHolder(View itemView, OnViewHolderClickListener listener) {
             super(itemView);
 
+            chapterLayout = (LinearLayout) itemView.findViewById(R.id.adapter_chapter_layout);
             chapterImageView = (ImageView) itemView.findViewById(R.id.adapter_chapter_image);
             chapterTextView = (TextView) itemView.findViewById(R.id.adapter_chapter_text);
 
             if (listener != null) {
                 viewHolderClickListener = listener;
-                chapterImageView.setOnClickListener(this);
+                chapterLayout.setOnClickListener(this);
             }
         }
 

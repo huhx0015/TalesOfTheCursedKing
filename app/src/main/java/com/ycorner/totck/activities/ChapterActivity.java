@@ -15,7 +15,7 @@
  */
 package com.ycorner.totck.activities;
 
-import com.ycorner.totck.ChapterAdapter;
+import com.ycorner.totck.ui.ChapterAdapter;
 import com.ycorner.totck.R;
 import com.ycorner.totck.model.MovieGroup;
 import com.ycorner.totck.model.Movies;
