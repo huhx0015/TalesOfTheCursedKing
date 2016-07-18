@@ -15,6 +15,7 @@
  */
 package com.ycorner.totck.activities;
 
+import com.ycorner.totck.display.TOTCKDisplayUtils;
 import com.ycorner.totck.ui.ChapterAdapter;
 import com.ycorner.totck.R;
 import com.ycorner.totck.model.MovieGroup;
@@ -73,7 +74,18 @@ public class ChapterActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+
+        // Sets the orientation of the RecyclerView, based on the current display orientation.
+        // PORTRAIT:
+        if (TOTCKDisplayUtils.getOrientation(this) == 0) {
+            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        }
+
+        // LANDSCAPE:
+        else {
+            layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        }
+
         chapterRecyclerView.setLayoutManager(layoutManager);
         ChapterAdapter chapterAdapter = new ChapterAdapter(chapterGroup, this);
         chapterRecyclerView.setAdapter(chapterAdapter);
