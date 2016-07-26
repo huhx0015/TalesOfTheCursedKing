@@ -1,18 +1,3 @@
-/*
- * Copyright (C) 2014 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.ycorner.totck.activities;
 
 import com.ycorner.totck.display.TOTCKDisplayUtils;
@@ -48,17 +33,6 @@ public class ChapterActivity extends AppCompatActivity {
 
         initChapterList();
         initRecyclerView();
-
-//        ExpandableListView sampleList = (ExpandableListView) findViewById(R.id.sample_list);
-//        sampleList.setAdapter(new MovieAdapter(this, movieGroups));
-//        sampleList.setOnChildClickListener(new OnChildClickListener() {
-//            @Override
-//            public boolean onChildClick(ExpandableListView parent, View view, int groupPosition,
-//                                        int childPosition, long id) {
-//                onSampleSelected(movieGroups.get(groupPosition).movies.get(childPosition));
-//                return true;
-//            }
-//        });
     }
 
     private void initChapterList() {

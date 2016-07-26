@@ -26,21 +26,28 @@
       android:src="@drawable/totck_background"
       android:scaleType="centerCrop" />
 
-  <ImageView
+  <LinearLayout
+      android:orientation="vertical"
       android:layout_width="match_parent"
-      android:layout_height="150dp"
-      android:id="@+id/activity_chapter_logo"
-      android:layout_gravity="top"
-      android:src="@drawable/totck_logo"
-      android:scaleType="fitCenter"
-      android:padding="32dp" />
+      android:layout_height="match_parent"
+      android:id="@+id/activity_chapter_container">
 
-  <android.support.v7.widget.RecyclerView
-      android:layout_width="match_parent"
-      android:layout_height="172dp"
-      android:id="@+id/activity_chapter_recycler_view"
-      android:layout_gravity="bottom|center"
-      android:background="@drawable/totck_dark_transparent_tile"
-      android:padding="16dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/activity_chapter_logo"
+        android:layout_gravity="top"
+        android:src="@drawable/totck_logo"
+        android:scaleType="fitCenter"
+        android:padding="32dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_chapter_recycler_view"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/totck_dark_transparent_tile"
+        android:padding="16dp" />
+  </LinearLayout>
 
 </FrameLayout>

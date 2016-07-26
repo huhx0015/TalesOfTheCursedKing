@@ -14,14 +14,14 @@
      limitations under the License.
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:focusable="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:keepScreenOn="true">
 
-  <com.google.android.exoplayer.AspectRatioFrameLayout android:id="@+id/video_frame"
+    <com.google.android.exoplayer.AspectRatioFrameLayout
+      android:id="@+id/video_frame"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_gravity="center">
@@ -36,13 +36,14 @@
         android:layout_height="match_parent"
         android:background="@android:color/black"/>
 
-    <com.google.android.exoplayer.text.SubtitleLayout android:id="@+id/subtitles"
+    <com.google.android.exoplayer.text.SubtitleLayout
+        android:id="@+id/subtitles"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
   </com.google.android.exoplayer.AspectRatioFrameLayout>
 
-  <LinearLayout
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="#88000000"
@@ -95,5 +96,13 @@
     </LinearLayout>
 
   </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_progress_bar"
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
 </FrameLayout>

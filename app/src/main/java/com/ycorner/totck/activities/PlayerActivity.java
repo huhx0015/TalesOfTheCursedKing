@@ -71,6 +71,7 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.PopupMenu;
 import android.widget.PopupMenu.OnMenuItemClickListener;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.net.CookieHandler;
@@ -88,7 +89,6 @@ import butterknife.ButterKnife;
 public class PlayerActivity extends Activity implements SurfaceHolder.Callback, OnClickListener,
     DemoPlayer.Listener, DemoPlayer.CaptionListener, DemoPlayer.Id3MetadataListener,
     AudioCapabilitiesReceiver.Listener {
-
 
     // For use within demo app code.
     public static final String CONTENT_ID_EXTRA = "content_id";
@@ -134,6 +134,7 @@ public class PlayerActivity extends Activity implements SurfaceHolder.Callback, 
     @BindView(R.id.video_controls) Button videoButton;
     @BindView(R.id.audio_controls) Button audioButton;
     @BindView(R.id.text_controls) Button textButton;
+    @BindView(R.id.player_progress_bar) ProgressBar playerProgress;
 
     // Activity lifecycle
 
@@ -378,25 +379,24 @@ public class PlayerActivity extends Activity implements SurfaceHolder.Callback, 
         if (playbackState == ExoPlayer.STATE_ENDED) {
             showControls();
         }
-        String text = "playWhenReady=" + playWhenReady + ", playbackState=";
         switch(playbackState) {
             case ExoPlayer.STATE_BUFFERING:
-                text += "buffering";
+                playerProgress.setVisibility(View.VISIBLE);
                 break;
             case ExoPlayer.STATE_ENDED:
-                text += "ended";
+                playerProgress.setVisibility(View.GONE);
                 break;
             case ExoPlayer.STATE_IDLE:
-                text += "idle";
+                playerProgress.setVisibility(View.GONE);
                 break;
             case ExoPlayer.STATE_PREPARING:
-                text += "preparing";
+                playerProgress.setVisibility(View.VISIBLE);
                 break;
             case ExoPlayer.STATE_READY:
-                text += "ready";
+                playerProgress.setVisibility(View.GONE);
                 break;
             default:
-                text += "unknown";
+                playerProgress.setVisibility(View.GONE);
                 break;
         }
         updateButtonVisibilities();
