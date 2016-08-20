@@ -50,10 +50,12 @@ import android.Manifest.permission;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -432,7 +434,7 @@ public class PlayerActivity extends Activity implements SurfaceHolder.Callback, 
             }
         }
         if (errorString != null) {
-            Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_LONG).show();
+            showErrorDialog(errorString);
         }
         playerNeedsPrepare = true;
         updateButtonVisibilities();
@@ -746,5 +748,18 @@ public class PlayerActivity extends Activity implements SurfaceHolder.Callback, 
             }
             return super.dispatchKeyEvent(event);
         }
+    }
+
+    private void showErrorDialog(String message) {
+        AlertDialog errorDialog = new AlertDialog.Builder(this)
+                .setMessage(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                })
+                .create();
+        errorDialog.show();
     }
 }
