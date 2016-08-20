@@ -20,10 +20,14 @@ import butterknife.ButterKnife;
  */
 public class ChapterActivity extends AppCompatActivity {
 
+    /** CLASS VARIABLES ________________________________________________________________________ **/
+
     private List<MovieGroup> chapterGroup = new ArrayList<>();
 
     @BindView(R.id.activity_chapter_recycler_view) RecyclerView chapterRecyclerView;
     @BindView(R.id.activity_chapter_background) ImageView chapterBackground;
+
+    /** ACTIVITY LIFECYCLE METHODS _____________________________________________________________ **/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

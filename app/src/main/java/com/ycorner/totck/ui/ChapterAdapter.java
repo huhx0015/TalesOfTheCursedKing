@@ -54,6 +54,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
 
         Glide.with(context)
                 .load(chapterGroup.get(0).movies.get(position).image)
+                .asBitmap()
                 .into(holder.chapterImageView);
     }
 

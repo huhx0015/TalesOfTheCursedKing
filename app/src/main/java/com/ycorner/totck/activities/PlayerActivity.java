@@ -89,6 +89,9 @@ import butterknife.ButterKnife;
  * An activity that plays media using {@link DemoPlayer}.
  */
 public class PlayerActivity extends Activity implements SurfaceHolder.Callback, OnClickListener,
+
+    /** CLASS VARIABLES ________________________________________________________________________ **/
+
     DemoPlayer.Listener, DemoPlayer.CaptionListener, DemoPlayer.Id3MetadataListener,
     AudioCapabilitiesReceiver.Listener {
 
@@ -138,7 +141,7 @@ public class PlayerActivity extends Activity implements SurfaceHolder.Callback, 
     @BindView(R.id.text_controls) Button textButton;
     @BindView(R.id.player_progress_bar) ProgressBar playerProgress;
 
-    // Activity lifecycle
+    /** ACTIVITY LIFECYCLE METHODS _____________________________________________________________ **/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
