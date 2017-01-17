@@ -3,9 +3,27 @@ Tales of the Cursed King
 
 DEVELOPER: huhx0015
 
+### TALES OF THE CURSED KING
+![totck_preview](https://cloud.githubusercontent.com/assets/1645482/22044334/03446b14-dcc9-11e6-88b1-39d9dbf066fc.gif)
+
 ## Description
 
 Tales of the Cursed King: An Android application in which you can view movie cutscenes from the Sony PlayStation 2 RPG, Dragon Quest VIII.
+
+This project was originally forked from Google's ExoPlayer demo app, found here: https://github.com/google/ExoPlayer/tree/release-v2/demo
+
+## Resources
+
+### Libraries
+
+* ExoPlayer 1.5.9: https://github.com/google/ExoPlayer/releases
+* ButterKnife: http://jakewharton.github.io/butterknife/
+* Glide: https://github.com/bumptech/glide
+* RoundedImageView: https://github.com/vinc3m1/RoundedImageView
+
+### Videos
+
+* Dragon's Den: http://www.woodus.com/den/home.php
 
 ## Copyright
 

@@ -129,6 +129,7 @@ public class PlayerActivity extends Activity implements SurfaceHolder.Callback, 
 
     private AudioCapabilitiesReceiver audioCapabilitiesReceiver;
 
+    // VIEW INJECTION VARIABLES
     @BindView(R.id.root) View root;
     @BindView(R.id.shutter) View shutterView;
     @BindView(R.id.controls_root) View debugRootView;

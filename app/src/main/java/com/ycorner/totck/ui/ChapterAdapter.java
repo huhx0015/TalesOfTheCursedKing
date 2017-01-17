@@ -11,13 +11,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.ycorner.totck.R;
 import com.ycorner.totck.activities.PlayerActivity;
 import com.ycorner.totck.model.MovieGroup;
 import com.ycorner.totck.model.Movies;
-
 import java.util.List;
 
 /**
