@@ -1,10 +1,10 @@
-Tales of the Cursed King
+﻿Tales of the Cursed King
 ========================
 
 DEVELOPER: huhx0015
 
 ### TALES OF THE CURSED KING
-![totck_preview](https://cloud.githubusercontent.com/assets/1645482/22044334/03446b14-dcc9-11e6-88b1-39d9dbf066fc.gif)
+![totck_preview](https://cloud.githubusercontent.com/assets/1645482/22046931/ab37d6da-dcd8-11e6-8087-2acdddc9fbe7.gif)
 
 ## Description
 
